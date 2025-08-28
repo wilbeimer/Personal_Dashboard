@@ -4,17 +4,31 @@
     <title>Dashboard Login</title>
 </head>
 <body>
-    <h1>Login</h1>
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
-    <button id="loginBtn">Login</button>
+      <form id="loginForm">
+         <h1 type="formHeading">Login</h1>
+         <div class="email">
+            <label for="email">Email</label  >
+            <input type="email" name="email" id="email" />
+         </div>
 
-    <script src="/static/js/main.js"></script>
+         <div class="pass">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+         </div>
+
+         <p id="loginError" style="color:red;"></p>
+
+         <button type="button" id="loginBtn" >Login</button>
+      </form>
+      <script type="module" src="/static/js/main.js"></script>
+      <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </body>
+ 
 <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/static/favicon/favicon.svg" />
 <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="Dashboard" />
 <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
 </html>

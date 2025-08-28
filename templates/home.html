@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <title>Dashboard Home</title>
+    <title>Dashboard Home</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
 <body>
-      <h1>Dashboard</h1>
+    <h1 type="pageHeading">Dashboard</h1>
+
+    <div class="notes-app">
+        <!-- Sidebar -->
+        <div class="notes-sidebar">
+            <button id="createNoteBtn">+ New Note</button>
+            <button id="deleteNoteBtn" style="display:none;">🗑 Delete Note</button>
+            <ul id="notesList"></ul>
+        </div>
+
+        <!-- Content area -->
+        <div class="notes-content">
+            <p id="notePlaceholder" style="text-align:center; color:gray;">
+                Select or create a note to get started
+            </p>
+            <input type="text" id="noteTitleDisplay" placeholder="Note title" style="display:none;" />
+            <textarea id="noteContentDisplay" placeholder="Note content..." style="display:none;"></textarea>
+            <p id="noteSaveStatus" style="color:green; display:none;"></p>
+        </div>
+    </div>
+
+    <script type="module" src="/static/js/main.js"></script>
 </body>
 </html>
